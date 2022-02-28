@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title> JUMP </title>
+        <style>
+            body { font-family: "Times New Roman", Serif; }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="checkbox" id="checkall" style="display:inline;">
+            <label for="checkall" id = label> Check All </label>
+            <label for="checkall" id = ulabel style="display:none;"> Uncheck All </label> <br/>
+            <input type="checkbox" id="b1">
+            <label for="b1"> first </label> <br/>
+            <input type="checkbox" id="b2">
+            <label for="b2"> second </label> <br/>
+            <input type="checkbox" id="b3">
+            <label for="b3"> third </label> <br/>
+            <input type="checkbox" id="b4">
+            <label for="b4"> fourth </label> <br/>
+        </form>
+        <script language = "javascript">
+            const btn = document.getElementById("checkall");
+            const label = document.getElementById("label");
+            const ulabel = document.getElementById("ulabel");
+            const b1 = document.getElementById("b1");
+            const b2 = document.getElementById("b2");
+            const b3 = document.getElementById("b3");
+            const b4 = document.getElementById("b4");
+            btn.addEventListener("click", ()=>{
+                if(btn.checked){
+                    ulabel.style.display =  "inline";
+                    label.style.display =  "none";
+                    b1.checked = true;
+                    b2.checked = true;
+                    b3.checked = true;
+                    b4.checked = true;
+                }else{
+                    label.style.display =  "inline";
+                    ulabel.style.display =  "none";
+                    b1.checked = false;
+                    b2.checked = false;
+                    b3.checked = false;
+                    b4.checked = false;
+                }
+            })
+        </script>
+    </body>
+</html>
