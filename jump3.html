@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="slides">
-            <img src ="images/puppies1.jpg">
+            <img src ="puppies1.jpg">
         </div>
         <script language = "javascript" type="text/javascript">
             images = ["puppies1.jpg", "puppies2.jpg", "puppies3.jpg", "puppies4.jpg", "puppies5.jpg"];
@@ -25,7 +25,7 @@
             function fadeinImg(){
                 currIndex++;
                 currIndex = currIndex % images.length;
-                $("#slides img").attr("src", "images/"+images[currIndex])
+                $("#slides img").attr("src", images[currIndex])
                 $("#slides img").fadeIn(3000, fadeoutImg);
             }
         </script>
